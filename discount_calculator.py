@@ -2,4 +2,6 @@
 class DiscountCalculator(object):
 
     def calculate(self, total, discount_amount, discount_type):
-        return total * discount_amount / 100
+        percentage_discount = float(discount_amount) / 100
+        discount = float(total) * percentage_discount
+        return discount
