@@ -10,4 +10,7 @@ class DiscountCalculator(object):
         else:
             raise ValueError(
                 'Discount type can be either percent or absolute.')
+        if discount > total:
+            raise ValueError(
+                'Discount cannot exceed the total amount.')
         return discount
